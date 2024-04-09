@@ -1,0 +1,77 @@
+<app-header></app-header>
+<br>
+<div class="contenido"> 
+    <h2><strong> Método Scoring </strong></h2>
+    <br>
+    <br>
+
+    <label>Defina la matriz</label>
+    <p></p>
+    Ancho <input type="number" name="dato25" id="dato25" [(ngModel)]="dato25" required>
+    Largo <input type="number" name="dato26" id="dato26" [(ngModel)]="dato26" required>
+
+
+
+
+    <table class="table table-bordered" *ngIf="showSimplexForm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Criterios A</th>
+                <th scope="col">Criterios B</th>
+                <th scope="col">Criterios C</th>
+                <th scope="col">Criterios D</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><input type="number" name="dato1" id="dato1" [(ngModel)]="dato1" required></td>
+                <td><input type="number" name="dato2" id="dato2" [(ngModel)]="dato2" required></td>
+                <td><input type="number" name="dato3" id="dato3" [(ngModel)]="dato3" required></td>
+                <td><input type="number" name="dato4" id="dato4" [(ngModel)]="dato4" required></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td><input type="number" name="dato5" id="dato5" [(ngModel)]="dato5" required /></td>
+                <td><input type="number" name="dato6" id="dato6" [(ngModel)]="dato6" required/></td>
+                <td><input type="number" name="dato7" id="dato7" [(ngModel)]="dato7" required /></td>
+                <td><input type="number" name="dato8" id="dato8" [(ngModel)]="dato8" required /></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td><input type="number" name="dato9" id="dato9" [(ngModel)]="dato9" required /></td>
+                <td><input type="number" name="dato10" id="dato10" [(ngModel)]="dato10" required/></td>
+                <td><input type="number" name="dato11" id="dato11" [(ngModel)]="dato11" required /></td>
+                <td><input type="number" name="dato12" id="dato12" [(ngModel)]="dato12" required /></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td><input type="number" name="dato13" id="dato13" [(ngModel)]="dato13" required /></td>
+                <td><input type="number" name="dato14" id="dato14" [(ngModel)]="dato14" required/></td>
+                <td><input type="number" name="dato15" id="dato15" [(ngModel)]="dato15" required /></td>
+                <td><input type="number" name="dato16" id="dato16" [(ngModel)]="dato16" required /></td>
+            </tr>
+            <tr>
+                <th scope="row">Beneficio/Costo</th>
+                <td><input type="number" name="dato17" id="dato17" [(ngModel)]="dato17" required></td>
+                <td><input type="number" name="dato18" id="dato18" [(ngModel)]="dato18" required></td>
+                <td><input type="number" name="dato19" id="dato19" [(ngModel)]="dato19" required></td>
+                <td><input type="number" name="dato20" id="dato20" [(ngModel)]="dato20" required></td>
+            </tr>
+            <tr>
+                <th scope="row">Pesos</th>
+                <td><input type="number" name="dato21" id="dato21" [(ngModel)]="dato21" required></td>
+                <td><input type="number" name="dato22" id="dato22" [(ngModel)]="dato22" required></td>
+                <td><input type="number" name="dato23" id="dato23" [(ngModel)]="dato23" required></td>
+                <td><input type="number" name="dato24" id="dato24" [(ngModel)]="dato24" required></td>
+            </tr>
+        </tbody>
+    </table>
+<br>
+    <label>Solucion optima</label>
+    <input type="text" [value]="optimalSolution" readonly>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="enviarDatosALaAPI()">Resolver scoring</button>
+<app-footer></app-footer>

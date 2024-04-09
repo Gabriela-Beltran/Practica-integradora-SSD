@@ -1,0 +1,48 @@
+<app-header></app-header>
+<br>
+<div class="contenido"> 
+    <h2><strong> Mineria de datos </strong></h2>
+    <br>
+    
+    <label>Selecciona una categoria </label>
+    <div class="row">
+        <div class="col-sm-4">
+            <select class="form-control" [(ngModel)]="coc">
+                    <option value="Mojito">Mojito</option>
+                    <option value="Margarita">Margarita</option>
+                    <option value="Gin Tonic">Gin Tonic</option>
+                    <option value="Daiquiri">Daiquiri</option>
+                    <option value="Negroni">Negroni</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <button  type="button" class="btn btn-primary" (click)="enviarDatosALaAPI()">Cargar tabla</button>
+    <button  type="button" class="btn btn-primary" (click)="grafica()">Observar en grafica</button>
+    <br>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre de la bebida</th>
+                <th scope="col">Principales categorías</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bebida of arreglo; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ bebida.strDrink }}</td>
+                <td>{{ bebida.strCategory }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <app-footer></app-footer>
+</div>

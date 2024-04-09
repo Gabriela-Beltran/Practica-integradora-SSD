@@ -1,0 +1,23 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+/* Establece el borde inferior en blanco o transparente para eliminar la línea inferior */
+.mat-form-field.mat-select {
+	border-bottom: none;
+  }
+  
+  /* Elimina el fondo en foco */
+  .mat-form-field{
+	background-color: transparent;
+  }
+  
+  /* Estilo de borde para el enfoque */
+  .mat-form-field.mat-focused .mat-form-field-underline {
+	background-color: transparent;
+  }
+  
